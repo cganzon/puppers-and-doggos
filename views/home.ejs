@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Puppers & Doggos</h1>
+    <%- include('partials/navbar') %>
+    
+    <form action="/search" method="GET">
+        <input type="text" name="search" id="search">
+        <button type="submit">Search</button>
+    </form>
     <% for(let result of results) { %>
         <img src="<%= result.url %>" alt="">
     <% } %>
