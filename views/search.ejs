@@ -9,11 +9,6 @@
 <body>
     <%- include('partials/navbar') %>
 
-    <form action="/search" method="GET">
-        <input type="text" name="search" id="search">
-        <button type="submit">Search</button>
-    </form>
-
     <ul>
         <% for (let result of results) { %>
             <% if(result.breed_group !== "Mixed") { %>
