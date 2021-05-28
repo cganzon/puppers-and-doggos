@@ -18,9 +18,14 @@
         <% for (let result of results) { %>
             <% if(result.breed_group !== "Mixed") { %>
                 <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
-                <p>Breed group: <%= result.breed_group %></p>
-                <p>Bred for: <%= result.bred_for %></p>
+                <% if(result.breed_group) { %>
+                    <p>Breed group: <%= result.breed_group %></p>
+                <% } %>
+                <% if(result.bred_for) { %>
+                    <p>Bred for: <%= result.bred_for %></p>
+                <% } %>
                 <p>Life span: <%= result.life_span %></p>
+                <p>Personality: <%= result.temperament %></p>
             <% } else { %>
                 <li><%= result.name %></li>
                 <p>Breed group: <%= result.breed_group %></p>

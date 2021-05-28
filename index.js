@@ -4,19 +4,20 @@ const port = 3000;
 const path = require("path");
 const axios = require("axios");
 
-app.set("views", path.join(__dirname, "views"));
+app.set("path", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, "/public")));
 
 // Gets random images/gifs and displays on the home route
 app.get("/", async (req, res) => {
   await axios
     .get("https://api.thedogapi.com/v1/images/search?limit=20&mime_types=gif")
     .then((response) => {
+      // console.log(response.data);
       let results = response.data;
-      res.render("home",  { results });
+      res.render("home", { results });
     })
     .catch((err) => {
       console.log(err);
@@ -26,11 +27,11 @@ app.get("/", async (req, res) => {
 // Displays all breed names
 app.get("/breeds", async (req, res) => {
   await axios
-    .get('https://api.thedogapi.com/v1/breeds')
+    .get("https://api.thedogapi.com/v1/breeds")
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       let results = response.data;
-      res.render("breeds",  { results });
+      res.render("breeds", { results });
     })
     .catch((err) => {
       console.log(err);
@@ -43,9 +44,10 @@ app.get("/breeds/:id", async (req, res) => {
   await axios
     .get(`https://api.thedogapi.com/v1/images/search?breed_id=${id}`)
     .then((response) => {
+      // console.log(response.data);
       let breedInfo = response.data;
       let breedDetails = response.data[0].breeds[0];
-      res.render("breedInfo",  { breedInfo, breedDetails });
+      res.render("breedInfo", { breedInfo, breedDetails });
     })
     .catch((err) => {
       console.log(err);
@@ -58,9 +60,9 @@ app.get("/search", async (req, res) => {
   await axios
     .get(`https://api.thedogapi.com/v1/breeds/search?q=${search}`)
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       let results = response.data;
-      res.render("search",  { results });
+      res.render("search", { results });
     })
     .catch((err) => {
       console.log(err);
