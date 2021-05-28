@@ -7,6 +7,13 @@
     <title><%= breedDetails.name %></title>
 </head>
 <body>
+    <%- include('partials/navbar') %>
+
+    <form action="/search" method="GET">
+        <input type="text" name="search" id="search">
+        <button type="submit">Search</button>
+    </form>
+
     <% for(let breed of breedInfo) { %>
         <h2><%= breedDetails.name %></h2>
         <% if(breedDetails.origin) { %>
@@ -19,8 +26,8 @@
             <p>Bred for: <%= breedDetails.bred_for %></p>
         <% } %>
         <p>Life span: <%= breedDetails.life_span %></p>
-        <p>Weight: <%= breedDetails.weight.imperial %> lb.</p>
-        <p>Height: <%= breedDetails.height.imperial %> in.</p>
+        <p>Weight (lb.): <%= breedDetails.weight.imperial %></p>
+        <p>Height (in.): <%= breedDetails.height.imperial %></p>
         <p>Personality: <%= breedDetails.temperament %></p>
         <img src="<%= breed.url %>" alt="<%= breedDetails.name %>">
     <% } %>

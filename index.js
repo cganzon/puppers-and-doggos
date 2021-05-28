@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Gets random images/gifs and displays on the home route
 app.get("/", async (req, res) => {
   await axios
-    .get("https://api.thedogapi.com/v1/images/search?limit=5")
+    .get("https://api.thedogapi.com/v1/images/search?limit=20&mime_types=gif")
     .then((response) => {
       let results = response.data;
       res.render("home",  { results });
@@ -40,14 +40,12 @@ app.get("/breeds", async (req, res) => {
 // Displays info on a selected breed
 app.get("/breeds/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(id);
   await axios
     .get(`https://api.thedogapi.com/v1/images/search?breed_id=${id}`)
     .then((response) => {
       let breedInfo = response.data;
       let breedDetails = response.data[0].breeds[0];
-      console.log(breedDetails);
-      res.render("breed",  { breedInfo, breedDetails });
+      res.render("breedInfo",  { breedInfo, breedDetails });
     })
     .catch((err) => {
       console.log(err);

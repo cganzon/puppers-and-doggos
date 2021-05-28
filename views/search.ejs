@@ -9,10 +9,29 @@
 <body>
     <%- include('partials/navbar') %>
 
+    <form action="/search" method="GET">
+        <input type="text" name="search" id="search">
+        <button type="submit">Search</button>
+    </form>
+
     <ul>
         <% for (let result of results) { %>
-            <li><%= result.name %></li>
-            <img src="<%= result.url %>" alt="">
+            <% if(result.breed_group !== "Mixed") { %>
+                <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
+                <p>Breed group: <%= result.breed_group %></p>
+                <p>Bred for: <%= result.bred_for %></p>
+                <p>Life span: <%= result.life_span %></p>
+            <% } else { %>
+                <li><%= result.name %></li>
+                <p>Breed group: <%= result.breed_group %></p>
+                <p>Life span: <%= result.life_span %></p>
+                <p>Height (in.): <%= result.height.imperial %></p>
+                <p>Weight (lb.): <%= result.weight.imperial %></p>
+                <% if(result.temperament) { %>
+                    <p>Personality: <%= result.temperament %></p>
+                <% } %>
+                <a href="https://www.google.com/search?q=<%= result.name %>" target ="_blank">More Info</a>
+            <% } %>
         <% } %>
     </ul>
 </body>

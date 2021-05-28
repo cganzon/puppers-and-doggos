@@ -10,11 +10,6 @@
 <body>
     <%- include('partials/navbar') %>
 
-    <form action="/search" method="GET">
-        <input type="text" name="search" id="search">
-        <button type="submit">Search</button>
-    </form>
-
     <% for(let result of results) { %>
         <img src="<%= result.url %>" alt="">
     <% } %>
