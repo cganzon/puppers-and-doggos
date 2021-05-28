@@ -1,0 +1,25 @@
+{
+  "name": "puppers-and-doggos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cganzon/puppers-and-doggos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cganzon/puppers-and-doggos/issues"
+  },
+  "homepage": "https://github.com/cganzon/puppers-and-doggos#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
