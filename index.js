@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Gets random images/gifs and displays on the home route
+// Gets random images and displays on the home route
 app.get("/", async (req, res) => {
   await axios
     .get("https://api.thedogapi.com/v1/images/search?limit=50&order=RANDOM&mime_types=jpg,png")
@@ -18,6 +18,20 @@ app.get("/", async (req, res) => {
       // console.log(response.data);
       let results = response.data;
       res.render("home", { results });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// Gets random gifs
+app.get("/gifs", async (req, res) => {
+  await axios
+    .get("https://api.thedogapi.com/v1/images/search?limit=100&order=RANDOM&mime_types=gif")
+    .then((response) => {
+      // console.log(response.data);
+      let results = response.data;
+      res.render("gifs", { results });
     })
     .catch((err) => {
       console.log(err);
