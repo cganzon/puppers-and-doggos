@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
 app.get("/gifs", async (req, res) => {
   await axios
     .get(
-      "https://api.thedogapi.com/v1/images/search?limit=100&order=RANDOM&mime_types=gif"
+      "https://api.thedogapi.com/v1/images/search?limit=30&mime_types=gif"
     )
     .then((response) => {
       // console.log(response.data);
