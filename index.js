@@ -13,7 +13,7 @@ app.use(express.json());
 // Gets random images/gifs and displays on the home route
 app.get("/", async (req, res) => {
   await axios
-    .get("https://api.thedogapi.com/v1/images/search?limit=50")
+    .get("https://api.thedogapi.com/v1/images/search?limit=50&order=RANDOM&mime_types=jpg,png")
     .then((response) => {
       // console.log(response.data);
       let results = response.data;
