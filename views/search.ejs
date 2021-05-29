@@ -12,26 +12,16 @@
 
     <ul>
         <% for (let result of results) { %>
-            <% if(result.breed_group !== "Mixed") { %>
-                <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
-                <% if(result.breed_group) { %>
-                    <p>Breed group: <%= result.breed_group %></p>
-                <% } %>
-                <% if(result.bred_for) { %>
-                    <p>Bred for: <%= result.bred_for %></p>
-                <% } %>
-                <p>Life span: <%= result.life_span %></p>
-                <p>Personality: <%= result.temperament %></p>
-            <% } else { %>
-                <li><%= result.name %></li>
+            <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
+            <% if(result.breed_group) { %>
                 <p>Breed group: <%= result.breed_group %></p>
-                <p>Life span: <%= result.life_span %></p>
-                <p>Height (in.): <%= result.height.imperial %></p>
-                <p>Weight (lb.): <%= result.weight.imperial %></p>
-                <% if(result.temperament) { %>
-                    <p>Personality: <%= result.temperament %></p>
-                <% } %>
-                <a href="https://www.google.com/search?q=<%= result.name %>" target ="_blank">More Info</a>
+            <% } %>
+            <% if(result.bred_for) { %>
+                <p>Bred for: <%= result.bred_for %></p>
+            <% } %>
+            <p>Life span: <%= result.life_span %></p>
+            <% if(result.temperament) { %>
+                <p>Personality: <%= result.temperament %></p>
             <% } %>
         <% } %>
     </ul>
