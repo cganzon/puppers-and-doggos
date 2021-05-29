@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.site-name {
+    font-size: 2.4rem;
+}
+
+.nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    padding-right: 2rem;
+    text-decoration: none;
+    color:rgb(42, 81, 165);
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+}
