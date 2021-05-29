@@ -88,6 +88,10 @@ app.get("/search", async (req, res) => {
     });
 });
 
+app.get("*", (req, res) => {
+  res.render("notFound");
+});
+
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
