@@ -12,7 +12,7 @@
 
     <ul>
         <% for (let result of results) { %>
-            <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
+            <li><h2><%= result.name %></h2></li>
             <% if(result.breed_group) { %>
                 <p>Breed group: <%= result.breed_group %></p>
             <% } %>
@@ -23,6 +23,7 @@
             <% if(result.temperament) { %>
                 <p>Personality: <%= result.temperament %></p>
             <% } %>
+            <a href="/breeds/<%= result.id %>">See more</a>
         <% } %>
     </ul>
 </body>
