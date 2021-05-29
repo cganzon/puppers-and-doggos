@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ffffff;
+}
+
+a {
+    color: #000;
+}
+
 /* Navbar */
 .site-name {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
 }
 
 .nav {
@@ -25,7 +33,6 @@
 .nav-link {
     padding-right: 2rem;
     text-decoration: none;
-    color:rgb(42, 81, 165);
 }
 
 .nav-link:hover {
@@ -33,5 +40,26 @@
 }
 
 .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+}
+
+.search-label {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search {
+    outline: none;
+    padding: 0.4rem;
+    width: 15rem;
+    
+}
+
+.search-btn {
+    padding: 0.4rem 0.6rem;
+    position: relative;
+    right: 2px;
 }

@@ -1,11 +1,12 @@
 <nav class="nav">
     <div class="nav-links">
-        <h1 class="site-name"><a class="nav-link" href="/">Puppers & Doggos</a></h1>
+        <h1 class="site-name"><a class="nav-link" href="/"><span class="puppers">Puppers </span> & <span class="doggos">Doggos</span></a></h1>
         <a class="nav-link nav-item" href="/breeds">Breeds</a>
     </div>
     
-    <form action="/search" method="GET">
-        <input type="text" name="search" id="search" placeholder="Search breeds">
-        <button type="submit">Search</button>
+    <form class="search-container" action="/search" method="GET">
+        <label for="search" class="search-label">Search breeds</label>
+        <input type="text" name="search" class="search" id="search" placeholder="Search breeds">
+        <button type="submit" class="search-btn">Search</button>
     </form>
 </nav>
