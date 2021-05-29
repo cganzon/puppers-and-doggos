@@ -9,9 +9,12 @@
 </head>
 <body>
     <%- include('partials/navbar') %>
-
-    <% for(let result of results) { %>
-        <img src="<%= result.url %>" alt="">
-    <% } %>
+    <div class="img-container">
+        <% for(let result of results) { %>
+            <div class="col">
+                <img src="<%= result.url %>" class="home-img" alt="<%= result.name %>">
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>

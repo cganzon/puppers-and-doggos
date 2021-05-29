@@ -73,3 +73,24 @@ a {
 .search-btn:hover {
     cursor: pointer;
 }
+
+/* Images on home page */
+.img-container {
+    max-width: 100vw;
+    height: auto;
+    margin: 40px;
+    column-count: 5;
+}
+
+.col {
+    height: auto;
+    break-inside: avoid-column;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.home-img {
+    width: 100%;
+    border-radius: 15px;
+}
