@@ -4,11 +4,11 @@ const port = 3000;
 const path = require("path");
 const axios = require("axios");
 
-app.set("path", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.set("path", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")));
 
 // Gets random images/gifs and displays on the home route
 app.get("/", async (req, res) => {
