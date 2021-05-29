@@ -13,7 +13,9 @@ app.use(express.json());
 // Gets random images and displays on the home route
 app.get("/", async (req, res) => {
   await axios
-    .get("https://api.thedogapi.com/v1/images/search?limit=50&order=RANDOM&mime_types=jpg,png")
+    .get(
+      "https://api.thedogapi.com/v1/images/search?limit=50&order=RANDOM&mime_types=jpg,png"
+    )
     .then((response) => {
       // console.log(response.data);
       let results = response.data;
@@ -27,7 +29,9 @@ app.get("/", async (req, res) => {
 // Gets random gifs
 app.get("/gifs", async (req, res) => {
   await axios
-    .get("https://api.thedogapi.com/v1/images/search?limit=100&order=RANDOM&mime_types=gif")
+    .get(
+      "https://api.thedogapi.com/v1/images/search?limit=100&order=RANDOM&mime_types=gif"
+    )
     .then((response) => {
       // console.log(response.data);
       let results = response.data;
@@ -65,6 +69,7 @@ app.get("/breeds/:id", async (req, res) => {
     })
     .catch((err) => {
       console.log(err);
+      res.render("notFound");
     });
 });
 
@@ -74,7 +79,7 @@ app.get("/search", async (req, res) => {
   await axios
     .get(`https://api.thedogapi.com/v1/breeds/search?q=${search}`)
     .then((response) => {
-      // console.log(response.data);
+      console.log(response.data);
       let results = response.data;
       res.render("search", { results });
     })
