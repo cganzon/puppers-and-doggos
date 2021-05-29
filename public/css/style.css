@@ -75,7 +75,7 @@ a {
 }
 
 /* Images on home page */
-.img-container {
+.img-container, .gif-container {
     max-width: 100vw;
     height: auto;
     margin: 40px;
@@ -90,7 +90,7 @@ a {
     margin-bottom: 10px;
 }
 
-.home-img {
+.home-img, .gif-img {
     width: 100%;
     border-radius: 15px;
 }
