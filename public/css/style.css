@@ -74,7 +74,7 @@ a {
     cursor: pointer;
 }
 
-/* Images on home page */
+/* Images/Gifs on home/gifs page */
 .img-container, .gif-container {
     max-width: 100vw;
     height: auto;
@@ -86,11 +86,11 @@ a {
     height: auto;
     break-inside: avoid-column;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 12px;
     margin-bottom: 10px;
 }
 
 .home-img, .gif-img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
