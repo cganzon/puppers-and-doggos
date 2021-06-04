@@ -22,7 +22,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: start;
-    padding-left: 2rem;
+    padding-top: 1.8rem;
+    padding-left: 2.5rem;
 }
 
 .nav-links {
@@ -100,7 +101,7 @@ a {
     .search {
         width: 25vw;
     }
-    
+
     .img-container, .gif-container {
         column-count: 4;
     }
