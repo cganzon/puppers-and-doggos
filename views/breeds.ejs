@@ -1,8 +1,12 @@
 <%- include('partials/head') %>
+<div class="breeds-container">
     <ul>
         <% for (let result of results) { %>
-            <li><a href="/breeds/<%= result.id %>"><%= result.name %></a></li>
-            <img src="<%= result.image.url %>" alt="<%= result.name %>">
+            <div class="breed-container">
+                <a class="breed-name" href="/breeds/<%= result.id %>"><%= result.name %></a>
+                <img class="breed-img" src="<%= result.image.url %>" alt="<%= result.name %>">
+            </div>
         <% } %>
     </ul>
+</div>
 <%- include('partials/footer') %>
