@@ -130,15 +130,15 @@ a {
     box-shadow: -3px 3px 5px 0px #999;
 }
 
-/* Breed search results page */
+/* Search results page */
 .search-results-container {
     height: 100%;
-    width: 80vw;
-    margin: 1rem auto;
+    width: 75vw;
+    margin: 2rem auto;
 }
 
 .search-result {
-    padding-bottom: 2rem;
+    padding: 2rem 1rem;
 }
 
 .more-info {
@@ -157,26 +157,31 @@ a {
 
 /* Media queries */
 @media (min-width: 1500px) {
+    /* Images/Gifs on home/gifs page */
     .img-container, .gif-container {
         column-count: 5;
     }
 }
 
 @media (max-width: 1300px) {
+    /* Navbar */
     .search {
         width: 25vw;
     }
 
+    /* Images/Gifs on home/gifs page */
     .img-container, .gif-container {
         column-count: 4;
     }
 
+    /* All breeds page */
     .breed-img {
         width: 40%;
     }
 }
 
 @media (max-width: 1000px) {
+    /* Navbar */
     .site-name {
         font-size: 1.8rem;
     }
@@ -189,10 +194,12 @@ a {
         font-size: 1.2rem;
     }
 
+    /* Images/Gifs on home/gifs page */
     .img-container, .gif-container {
         column-count: 3;
     }
 
+    /* All breeds page */
     .breed-name {
         font-size: 1.2rem;
     }
@@ -203,6 +210,7 @@ a {
 }
 
 @media (max-width: 800px) {
+    /* Navbar */
     .nav {
         height: 15vh;
         flex-direction: column;
@@ -238,11 +246,13 @@ a {
         width: 60vw;
     }
 
+    /* Images/Gifs on home/gifs page */
     .img-container, .gif-container {
         column-count: 2;
         padding-top: 5rem;
     }
 
+    /* All breeds page */
     .breeds-container {
         padding-top: 5rem;
     }
@@ -251,12 +261,14 @@ a {
         width: 65%;
     }
 
+    /* Search results page */
     .search-results-container {
         padding-top: 6rem;
     }
 }
 
 @media (max-width: 600px) {
+    /* Navbar */
     .site-name {
         font-size: 1.8rem;
     }
@@ -264,11 +276,12 @@ a {
     .nav-item {
         font-size: 1rem;
     }
-
+    /* Images/Gifs on home/gifs page */
     .img-container, .gif-container {
         column-count: 1;
     }
 
+    /* All breeds page */
     .breeds-container {
         padding-top: 3rem;
     }
