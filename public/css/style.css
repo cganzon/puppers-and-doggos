@@ -155,6 +155,12 @@ a {
     margin-top: auto;
 }
 
+/* Not found page */
+.error {
+    margin: auto;
+    padding: 0 3rem;
+}
+
 /* Media queries */
 @media (min-width: 1500px) {
     /* Images/Gifs on home/gifs page */
@@ -292,6 +298,15 @@ a {
 
     .breed-img {
         width: 75%;
+    }
+
+    /* Footer */
+    .credit {
+        font-size: 0.8rem;
+    }
+    /* Not found page */
+    .error {
+        font-size: 1rem;
     }
 }
 
