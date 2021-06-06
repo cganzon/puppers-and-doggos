@@ -1,9 +1,14 @@
 <%- include('partials/head') %>
-    <div class="img-container">
-        <% for(let result of results) { %>
-            <div class="col">
-                <img src="<%= result.url %>" class="home-img" alt="<%= result.name %>">
-            </div>
-        <% } %>
-    </div>
+<div class="img-container">
+	<% for(let result of results) { %>
+	<div class="col">
+		<img
+			src="<%= result.url %>"
+			class="home-img"
+			alt="<%= result.name %>"
+			loading="lazy"
+		/>
+	</div>
+	<% } %>
+</div>
 <%- include('partials/footer') %>

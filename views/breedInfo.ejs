@@ -1,19 +1,15 @@
-<%- include('partials/head') %>
-    <% for(let breed of breedInfo) { %>
-        <h2><%= breedDetails.name %></h2>
-        <% if(breedDetails.origin) { %>
-            <p>Origin: <%= breedDetails.origin %></p>
-        <% } %>
-        <% if(breedDetails.breed_group) { %>
-            <p>Breed group: <%= breedDetails.breed_group %></p>
-        <% } %>
-        <% if(breedDetails.bred_for) { %>
-            <p>Bred for: <%= breedDetails.bred_for %></p>
-        <% } %>
-        <p>Life span: <%= breedDetails.life_span %></p>
-        <p>Weight (lb.): <%= breedDetails.weight.imperial %></p>
-        <p>Height (in.): <%= breedDetails.height.imperial %></p>
-        <p>Personality: <%= breedDetails.temperament %></p>
-        <img src="<%= breed.url %>" alt="<%= breedDetails.name %>">
-    <% } %>
-<%- include('partials/footer') %>
+<%- include('partials/head') %> <% for(let breed of breedInfo) { %>
+<h2><%= breedDetails.name %></h2>
+<% if(breedDetails.origin) { %>
+<p>Origin: <%= breedDetails.origin %></p>
+<% } %> <% if(breedDetails.breed_group) { %>
+<p>Breed group: <%= breedDetails.breed_group %></p>
+<% } %> <% if(breedDetails.bred_for) { %>
+<p>Bred for: <%= breedDetails.bred_for %></p>
+<% } %>
+<p>Life span: <%= breedDetails.life_span %></p>
+<p>Weight (lb.): <%= breedDetails.weight.imperial %></p>
+<p>Height (in.): <%= breedDetails.height.imperial %></p>
+<p>Personality: <%= breedDetails.temperament %></p>
+<img src="<%= breed.url %>" alt="<%= breedDetails.name %>" />
+<% } %> <%- include('partials/footer') %>

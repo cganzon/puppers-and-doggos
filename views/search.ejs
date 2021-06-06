@@ -1,20 +1,19 @@
 <%- include('partials/head') %>
 <div class="search-results-container">
-    <% for (let result of results) { %>
-        <div class="search-result">
-            <h2><%= result.name %></h2>
-            <% if(result.breed_group) { %>
-                <p>Breed group: <%= result.breed_group %></p>
-            <% } %>
-            <% if(result.bred_for) { %>
-                <p>Bred for: <%= result.bred_for %></p>
-            <% } %>
-            <p>Life span: <%= result.life_span %></p>
-            <% if(result.temperament) { %>
-                <p>Personality: <%= result.temperament %></p>
-            <% } %>
-            <a class="more-info" href="/breeds/<%= result.id %>">More information</a>
-        </div>
-    <% } %>
+	<% for (let result of results) { %>
+	<div class="search-result">
+		<h2><%= result.name %></h2>
+		<% if(result.breed_group) { %>
+		<p>Breed group: <%= result.breed_group %></p>
+		<% } %> <% if(result.bred_for) { %>
+		<p>Bred for: <%= result.bred_for %></p>
+		<% } %>
+		<p>Life span: <%= result.life_span %></p>
+		<% if(result.temperament) { %>
+		<p>Personality: <%= result.temperament %></p>
+		<% } %>
+		<a class="more-info" href="/breeds/<%= result.id %>">More information</a>
+	</div>
+	<% } %>
 </div>
 <%- include('partials/footer') %>
