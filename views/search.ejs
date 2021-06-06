@@ -1,7 +1,8 @@
 <%- include('partials/head') %>
-    <ul>
-        <% for (let result of results) { %>
-            <li><h2><%= result.name %></h2></li>
+<div class="search-results-container">
+    <% for (let result of results) { %>
+        <div class="search-result">
+            <h2><%= result.name %></h2>
             <% if(result.breed_group) { %>
                 <p>Breed group: <%= result.breed_group %></p>
             <% } %>
@@ -12,7 +13,8 @@
             <% if(result.temperament) { %>
                 <p>Personality: <%= result.temperament %></p>
             <% } %>
-            <a href="/breeds/<%= result.id %>">See more</a>
-        <% } %>
-    </ul>
+            <a class="more-info" href="/breeds/<%= result.id %>">More information</a>
+        </div>
+    <% } %>
+</div>
 <%- include('partials/footer') %>

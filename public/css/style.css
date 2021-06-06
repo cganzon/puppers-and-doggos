@@ -6,6 +6,9 @@
 
 body {
     background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -127,6 +130,31 @@ a {
     box-shadow: -3px 3px 5px 0px #999;
 }
 
+/* Breed search results page */
+.search-results-container {
+    height: 100%;
+    width: 80vw;
+    margin: 1rem auto;
+}
+
+.search-result {
+    padding-bottom: 2rem;
+}
+
+.more-info {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+}
+
 /* Media queries */
 @media (min-width: 1500px) {
     .img-container, .gif-container {
@@ -221,6 +249,10 @@ a {
 
     .breed-img {
         width: 65%;
+    }
+
+    .search-results-container {
+        padding-top: 6rem;
     }
 }
 
