@@ -87,9 +87,9 @@ a {
 /* Images/Gifs on home/gifs page */
 .img-container,
 .gif-container {
-	max-width: 100vw;
+	max-width: 75%;
 	height: auto;
-	margin: 40px;
+	margin: 40px auto;
 	column-count: 5;
 }
 
@@ -154,9 +154,9 @@ a {
 
 /* Breed info page */
 .breed-details-container {
-	max-width: 80vw;
+	max-width: 70vw;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin: 5rem auto;
 }
 
