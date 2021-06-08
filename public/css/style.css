@@ -373,6 +373,11 @@ a {
 		font-size: 0.8rem;
 	}
 
+	/* Search results page */
+	/* .search-results-feedback {
+		font-size: 1rem;
+	} */
+
 	/* Footer */
 	.credit {
 		font-size: 0.8rem;
@@ -380,6 +385,13 @@ a {
 
 	/* Not found page */
 	.error {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 390px) {
+	/* Search results page */
+	.search-results-feedback {
 		font-size: 1rem;
 	}
 }

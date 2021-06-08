@@ -1,27 +1,27 @@
-<%- include('partials/head') %> <% for(let breed of breedInfo) { %>
-<div class="breed-details-container">
-	<div class="breed-details">
-		<h2 class="breed-details-name"><%= breedDetails.name %></h2>
-		<% if(breedDetails.origin) { %>
-		<p class="breed-details">Origin: <%= breedDetails.origin %></p>
-		<% } %> <% if(breedDetails.breed_group) { %>
-		<p class="breed-details">Breed group: <%= breedDetails.breed_group %></p>
-		<% } %> <% if(breedDetails.bred_for) { %>
-		<p class="breed-details">Bred for: <%= breedDetails.bred_for %></p>
-		<% } %>
-		<p class="breed-details">Life span: <%= breedDetails.life_span %></p>
-		<p class="breed-details">
-			Weight (lb.): <%= breedDetails.weight.imperial %>
-		</p>
-		<p class="breed-details">
-			Height (in.): <%= breedDetails.height.imperial %>
-		</p>
-		<p class="breed-details">Personality: <%= breedDetails.temperament %></p>
+<%- include('partials/head') %> 
+<% for(let breed of breedInfo) { %>
+	<div class="breed-details-container">
+		<div class="breed-details">
+			<h2 class="breed-details-name"><%= breedDetails.name %></h2>
+			<% if(breedDetails.origin) { %>
+				<p class="breed-details">Origin: <%= breedDetails.origin %></p>
+			<% } %> 
+			<% if(breedDetails.breed_group) { %>
+				<p class="breed-details">Breed group: <%= breedDetails.breed_group %></p>
+			<% } %> 
+			<% if(breedDetails.bred_for) { %>
+				<p class="breed-details">Bred for: <%= breedDetails.bred_for %></p>
+			<% } %>
+			<p class="breed-details">Life span: <%= breedDetails.life_span %></p>
+			<p class="breed-details">
+				Weight (lb.): <%= breedDetails.weight.imperial %>
+			</p>
+			<p class="breed-details">
+				Height (in.): <%= breedDetails.height.imperial %>
+			</p>
+			<p class="breed-details">Personality: <%= breedDetails.temperament %></p>
+		</div>
+		<img class="breed-details-img" src="<%= breed.url %>" alt="<%= breedDetails.name %>"/>
 	</div>
-	<img
-		class="breed-details-img"
-		src="<%= breed.url %>"
-		alt="<%= breedDetails.name %>"
-	/>
-</div>
-<% } %> <%- include('partials/footer') %>
+<% } %> 
+<%- include('partials/footer') %>

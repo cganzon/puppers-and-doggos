@@ -2,17 +2,10 @@
 <div class="breeds-container">
 	<ul>
 		<% for (let result of results) { %>
-		<div class="breed-container">
-			<a class="breed-name" href="/breeds/<%= result.id %>">
-				<%= result.name %>
-			</a>
-			<img
-				class="breed-img"
-				src="<%= result.image.url %>"
-				alt="<%= result.name %>"
-				loading="lazy"
-			/>
-		</div>
+			<div class="breed-container">
+				<a class="breed-name" href="/breeds/<%= result.id %>"><%= result.name %></a>
+				<img class="breed-img" src="<%= result.image.url %>" alt="<%= result.name %>" loading="lazy"/>
+			</div>
 		<% } %>
 	</ul>
 </div>

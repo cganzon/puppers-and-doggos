@@ -1,20 +1,25 @@
 <%- include('partials/head') %>
 <div class="search-results-container">
-	<h2>
-		Search results for "<%= search %>" <% if (results.length === 0) { %>(<%= 0
-		%>) <% } else { %>(<%= results.length %>) <% } %>
+	<h2 class="search-results-feedback">
+		Search results for "<%= search %>" 
+		<% if (results.length === 0) { %>
+			(<%= 0 %>) 
+		<% } else { %>
+			(<%= results.length %>) 
+		<% } %>
 	</h2>
 	<% for (let result of results) { %>
 	<div class="search-result">
 		<h2><%= result.name %></h2>
 		<% if(result.breed_group) { %>
-		<p>Breed group: <%= result.breed_group %></p>
-		<% } %> <% if(result.bred_for) { %>
-		<p>Bred for: <%= result.bred_for %></p>
+			<p>Breed group: <%= result.breed_group %></p>
+		<% } %> 
+		<% if(result.bred_for) { %>
+			<p>Bred for: <%= result.bred_for %></p>
 		<% } %>
-		<p>Life span: <%= result.life_span %></p>
+			<p>Life span: <%= result.life_span %></p>
 		<% if(result.temperament) { %>
-		<p>Personality: <%= result.temperament %></p>
+			<p>Personality: <%= result.temperament %></p>
 		<% } %>
 		<a class="more-info" href="/breeds/<%= result.id %>">More information</a>
 	</div>
