@@ -79,7 +79,7 @@ app.get("/search", async (req, res) => {
 		.then((response) => {
 			console.log(response.data);
 			let results = response.data;
-			res.render("search", { results });
+			res.render("search", { results, search });
 		})
 		.catch((err) => {
 			console.log(err);
